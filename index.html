@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vamos Somos Chilenos — Radio Portales 89.5 FM</title>
+    <meta name="description" content="Programa de radio en Radio Portales 89.5 FM, Valparaíso. Actualidad, historia y cultura chilena con Rodrigo, Rafael, Martín, Jorge y Patricio.">
+    <meta name="keywords" content="radio chilena, Radio Portales, Valparaíso, actualidad, historia de Chile, podcast chileno">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Vamos Somos Chilenos — Radio Portales 89.5 FM">
+    <meta property="og:description" content="Actualidad, historia y cultura chilena. Viernes 19:00 y Sábado 11:30 en Radio Portales 89.5 FM.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vamossomoschilenos.cl">
+    <meta property="og:image" content="https://vamossomoschilenos.cl/assets/images/og-image.jpg">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@SomosVamos">
+    <meta name="twitter:title" content="Vamos Somos Chilenos — Radio Portales 89.5 FM">
+    <meta name="twitter:description" content="Actualidad, historia y cultura chilena en Radio Portales 89.5 FM, Valparaíso.">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <!-- ========== NAVIGATION ========== -->
+    <header class="nav" id="nav">
+        <div class="nav__container">
+            <a href="#hero" class="nav__logo">
+                <span class="nav__logo-star">★</span>
+                <span class="nav__logo-text">Vamos<br>Somos Chilenos</span>
+            </a>
+            <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+                <span class="nav__toggle-bar"></span>
+            </button>
+            <nav class="nav__menu" id="navMenu" role="navigation">
+                <a href="#en-vivo" class="nav__link">En Vivo</a>
+                <a href="#redes" class="nav__link">Redes</a>
+                <a href="#episodios" class="nav__link">Episodios</a>
+                <a href="#programa" class="nav__link">Programa</a>
+                <a href="#equipo" class="nav__link">Equipo</a>
+                <a href="#contacto" class="nav__link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="hero">
+            <div class="hero__bg">
+                <div class="hero__stripe hero__stripe--blue"></div>
+                <div class="hero__stripe hero__stripe--red"></div>
+                <div class="hero__noise"></div>
+            </div>
+            <div class="hero__content">
+                <p class="hero__badge anim-fade-up">Radio Portales 89.5 FM — Valparaíso</p>
+                <h1 class="hero__title anim-fade-up anim-delay-1">
+                    <span class="hero__title-line">Vamos</span>
+                    <span class="hero__title-line hero__title-line--accent">Somos</span>
+                    <span class="hero__title-line">Chilenos</span>
+                </h1>
+                <p class="hero__tagline anim-fade-up anim-delay-2">Actualidad, historia y cultura desde el corazón de Chile</p>
+                <div class="hero__actions anim-fade-up anim-delay-3">
+                    <a href="https://portalesfm.cl" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
+                        <i class="fa-solid fa-radio"></i> Escuchar Ahora
+                    </a>
+                    <a href="#en-vivo" class="btn btn--outline">
+                        <i class="fa-solid fa-play"></i> Último Episodio
+                    </a>
+                </div>
+                <div class="hero__schedule anim-fade-up anim-delay-4">
+                    <div class="hero__schedule-item">
+                        <span class="hero__schedule-day">Viernes</span>
+                        <span class="hero__schedule-time">19:00 hrs</span>
+                    </div>
+                    <div class="hero__schedule-divider"></div>
+                    <div class="hero__schedule-item">
+                        <span class="hero__schedule-day">Sábado</span>
+                        <span class="hero__schedule-time">11:30 hrs</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero__scroll-indicator">
+                <span>Scroll</span>
+                <div class="hero__scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- ========== EN VIVO ========== -->
+        <section class="section section--dark" id="en-vivo">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">En Vivo</span>
+                    <h2 class="section__title reveal">Último Episodio</h2>
+                </div>
+                <div class="envivo">
+                    <div class="envivo__video reveal">
+                        <div class="envivo__embed">
+                            <iframe
+                                src="https://www.youtube.com/embed/NS6wsDt7Qwo"
+                                title="Vamos Somos Chilenos - Último Episodio"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                    <div class="envivo__info reveal">
+                        <div class="envivo__badge">
+                            <i class="fa-solid fa-tower-broadcast"></i> Radio Portales 89.5 FM
+                        </div>
+                        <h3 class="envivo__episode-title">Programa de la Semana</h3>
+                        <p class="envivo__desc">Sintonízanos cada semana para estar al tanto de la actualidad nacional e internacional, y para revivir la historia de Chile y sus héroes.</p>
+                        <div class="envivo__horarios">
+                            <div class="envivo__horario">
+                                <div class="envivo__horario-icon"><i class="fa-solid fa-microphone"></i></div>
+                                <div>
+                                    <strong>Viernes 19:00 hrs</strong>
+                                    <p>Rodrigo, Rafael y Martín</p>
+                                    <span class="envivo__tema">Actualidad nacional e internacional</span>
+                                </div>
+                            </div>
+                            <div class="envivo__horario">
+                                <div class="envivo__horario-icon"><i class="fa-solid fa-book-open"></i></div>
+                                <div>
+                                    <strong>Sábado 11:30 hrs</strong>
+                                    <p>Jorge y Patricio</p>
+                                    <span class="envivo__tema">Reviviendo la historia de Chile</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://portalesfm.cl" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
+                            <i class="fa-solid fa-radio"></i> Escuchar Radio Portales En Vivo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== REDES SOCIALES ========== -->
+        <section class="section section--accent" id="redes">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Síguenos</span>
+                    <h2 class="section__title reveal">Nuestras Redes</h2>
+                </div>
+                <div class="redes reveal">
+                    <a href="https://youtu.be/NS6wsDt7Qwo" target="_blank" rel="noopener noreferrer" class="redes__card redes__card--youtube">
+                        <i class="fa-brands fa-youtube"></i>
+                        <span class="redes__name">YouTube</span>
+                        <span class="redes__handle">Vamos Somos Chilenos</span>
+                    </a>
+                    <a href="https://open.spotify.com/show/0svV8CI4En4r5P4bOc6Y3r" target="_blank" rel="noopener noreferrer" class="redes__card redes__card--spotify">
+                        <i class="fa-brands fa-spotify"></i>
+                        <span class="redes__name">Spotify</span>
+                        <span class="redes__handle">Podcast</span>
+                    </a>
+                    <a href="https://tiktok.com/@vamossomoschilenos" target="_blank" rel="noopener noreferrer" class="redes__card redes__card--tiktok">
+                        <i class="fa-brands fa-tiktok"></i>
+                        <span class="redes__name">TikTok</span>
+                        <span class="redes__handle">@vamossomoschilenos</span>
+                    </a>
+                    <a href="https://x.com/SomosVamos" target="_blank" rel="noopener noreferrer" class="redes__card redes__card--x">
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <span class="redes__name">X (Twitter)</span>
+                        <span class="redes__handle">@SomosVamos</span>
+                    </a>
+                    <a href="https://www.instagram.com/p/DV02TWPER-0/" target="_blank" rel="noopener noreferrer" class="redes__card redes__card--instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                        <span class="redes__name">Instagram</span>
+                        <span class="redes__handle">@vamossomoschilenos</span>
+                    </a>
+                    <a href="https://www.facebook.com/photo/?fbid=1484762013655916" target="_blank" rel="noopener noreferrer" class="redes__card redes__card--facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                        <span class="redes__name">Facebook</span>
+                        <span class="redes__handle">Vamos Somos Chilenos</span>
+                    </a>
+                    <a href="https://portalesfm.cl" target="_blank" rel="noopener noreferrer" class="redes__card redes__card--portales">
+                        <i class="fa-solid fa-radio"></i>
+                        <span class="redes__name">Radio Portales</span>
+                        <span class="redes__handle">89.5 FM — En Vivo</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== EPISODIOS RECIENTES ========== -->
+        <section class="section section--dark" id="episodios">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Archivo</span>
+                    <h2 class="section__title reveal">Episodios Recientes</h2>
+                    <div class="carousel__controls">
+                        <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Episodio anterior">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Episodio siguiente">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="carousel reveal" id="carousel">
+                    <div class="carousel__track">
+                        <article class="carousel__card">
+                            <div class="carousel__thumb">
+                                <img src="https://img.youtube.com/vi/NS6wsDt7Qwo/mqdefault.jpg" alt="Episodio reciente" loading="lazy">
+                                <span class="carousel__play"><i class="fa-solid fa-play"></i></span>
+                            </div>
+                            <div class="carousel__info">
+                                <h4>Actualidad Nacional — Análisis Semanal</h4>
+                                <time>Viernes 19:00 hrs</time>
+                            </div>
+                        </article>
+                        <article class="carousel__card">
+                            <div class="carousel__thumb">
+                                <img src="https://img.youtube.com/vi/B9tx6gRh5oA/mqdefault.jpg" alt="Episodio reciente" loading="lazy">
+                                <span class="carousel__play"><i class="fa-solid fa-play"></i></span>
+                            </div>
+                            <div class="carousel__info">
+                                <h4>Héroes de Chile — Historias que Inspiran</h4>
+                                <time>Sábado 11:30 hrs</time>
+                            </div>
+                        </article>
+                        <article class="carousel__card">
+                            <div class="carousel__thumb">
+                                <img src="https://img.youtube.com/vi/NS6wsDt7Qwo/mqdefault.jpg" alt="Episodio reciente" loading="lazy">
+                                <span class="carousel__play"><i class="fa-solid fa-play"></i></span>
+                            </div>
+                            <div class="carousel__info">
+                                <h4>Debate — Política y Sociedad</h4>
+                                <time>Viernes 19:00 hrs</time>
+                            </div>
+                        </article>
+                        <article class="carousel__card">
+                            <div class="carousel__thumb">
+                                <img src="https://img.youtube.com/vi/B9tx6gRh5oA/mqdefault.jpg" alt="Episodio reciente" loading="lazy">
+                                <span class="carousel__play"><i class="fa-solid fa-play"></i></span>
+                            </div>
+                            <div class="carousel__info">
+                                <h4>Chile Profundo — Tradiciones y Cultura</h4>
+                                <time>Sábado 11:30 hrs</time>
+                            </div>
+                        </article>
+                        <article class="carousel__card">
+                            <div class="carousel__thumb">
+                                <img src="https://img.youtube.com/vi/NS6wsDt7Qwo/mqdefault.jpg" alt="Episodio reciente" loading="lazy">
+                                <span class="carousel__play"><i class="fa-solid fa-play"></i></span>
+                            </div>
+                            <div class="carousel__info">
+                                <h4>Entrevista Especial — Voces de la Región</h4>
+                                <time>Viernes 19:00 hrs</time>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SOBRE EL PROGRAMA ========== -->
+        <section class="section" id="programa">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Nosotros</span>
+                    <h2 class="section__title reveal">Sobre el Programa</h2>
+                </div>
+                <div class="about reveal">
+                    <div class="about__text">
+                        <p class="about__lead"><strong>Vamos Somos Chilenos</strong> es más que un programa de radio: es un espacio donde la actualidad se encuentra con la historia, donde el debate se nutre de la memoria y donde cada voz cuenta.</p>
+                        <p>Transmitiendo desde <strong>Radio Portales 89.5 FM</strong> en Valparaíso, nuestro equipo se reúne cada semana para analizar los temas que importan, rescatar las historias que nos definen como nación y dar tribuna a las voces que construyen el Chile de hoy.</p>
+                        <p>Con dos programas semanales — uno enfocado en la actualidad y otro en la historia — cubrimos el espectro completo de lo que significa ser chileno en el siglo XXI.</p>
+                    </div>
+                    <div class="about__stats">
+                        <div class="stat reveal">
+                            <div class="stat__header">
+                                <span class="stat__label">Alcance en Redes</span>
+                                <span class="stat__value">6 Plataformas</span>
+                            </div>
+                            <div class="stat__bar"><div class="stat__fill" data-width="85"></div></div>
+                        </div>
+                        <div class="stat reveal">
+                            <div class="stat__header">
+                                <span class="stat__label">Programas Semanales</span>
+                                <span class="stat__value">2 por Semana</span>
+                            </div>
+                            <div class="stat__bar"><div class="stat__fill" data-width="70"></div></div>
+                        </div>
+                        <div class="stat reveal">
+                            <div class="stat__header">
+                                <span class="stat__label">Cobertura Temática</span>
+                                <span class="stat__value">Actualidad + Historia</span>
+                            </div>
+                            <div class="stat__bar"><div class="stat__fill" data-width="95"></div></div>
+                        </div>
+                        <div class="stat reveal">
+                            <div class="stat__header">
+                                <span class="stat__label">Presencia Regional</span>
+                                <span class="stat__value">Valparaíso y más</span>
+                            </div>
+                            <div class="stat__bar"><div class="stat__fill" data-width="75"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== EQUIPO ========== -->
+        <section class="section section--dark" id="equipo">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Las Voces</span>
+                    <h2 class="section__title reveal">Nuestro Equipo</h2>
+                </div>
+                <div class="equipo reveal">
+                    <p class="equipo__subtitle">Programa del Viernes — 19:00 hrs — Actualidad</p>
+                    <div class="equipo__grid equipo__grid--viernes">
+                        <div class="equipo__card">
+                            <div class="equipo__avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h4 class="equipo__name">Rodrigo</h4>
+                            <span class="equipo__role">Conductor</span>
+                            <p class="equipo__bio">Análisis y debate de la actualidad nacional e internacional cada viernes.</p>
+                        </div>
+                        <div class="equipo__card">
+                            <div class="equipo__avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h4 class="equipo__name">Rafael</h4>
+                            <span class="equipo__role">Conductor</span>
+                            <p class="equipo__bio">Perspectiva aguda y opinión fundamentada sobre los temas que importan.</p>
+                        </div>
+                        <div class="equipo__card">
+                            <div class="equipo__avatar">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h4 class="equipo__name">Martín</h4>
+                            <span class="equipo__role">Conductor</span>
+                            <p class="equipo__bio">Compromiso con la verdad y el periodismo ciudadano de calidad.</p>
+                        </div>
+                    </div>
+
+                    <p class="equipo__subtitle">Programa del Sábado — 11:30 hrs — Historia de Chile</p>
+                    <div class="equipo__grid equipo__grid--sabado">
+                        <div class="equipo__card">
+                            <div class="equipo__avatar equipo__avatar--sabado">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h4 class="equipo__name">Jorge</h4>
+                            <span class="equipo__role">Conductor</span>
+                            <p class="equipo__bio">Rescatando las historias de los héroes y heroínas que forjaron nuestra nación.</p>
+                        </div>
+                        <div class="equipo__card">
+                            <div class="equipo__avatar equipo__avatar--sabado">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h4 class="equipo__name">Patricio</h4>
+                            <span class="equipo__role">Conductor</span>
+                            <p class="equipo__bio">Reviviendo la historia de Chile con pasión y rigor cada sábado.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== SPONSORS ========== -->
+        <section class="section" id="sponsors">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Colaboradores</span>
+                    <h2 class="section__title reveal">Nuestros Auspiciadores</h2>
+                </div>
+                <div class="sponsors reveal">
+                    <div class="sponsors__grid">
+                        <div class="sponsors__logo"><i class="fa-solid fa-building"></i><span>Auspiciador 1</span></div>
+                        <div class="sponsors__logo"><i class="fa-solid fa-store"></i><span>Auspiciador 2</span></div>
+                        <div class="sponsors__logo"><i class="fa-solid fa-industry"></i><span>Auspiciador 3</span></div>
+                        <div class="sponsors__logo"><i class="fa-solid fa-landmark"></i><span>Auspiciador 4</span></div>
+                        <div class="sponsors__logo"><i class="fa-solid fa-shop"></i><span>Auspiciador 5</span></div>
+                        <div class="sponsors__logo"><i class="fa-solid fa-briefcase"></i><span>Auspiciador 6</span></div>
+                    </div>
+                    <div class="sponsors__cta">
+                        <p>¿Quieres que tu marca sea parte de nuestro programa?</p>
+                        <div class="sponsors__buttons">
+                            <a href="#contacto" class="btn btn--primary">
+                                <i class="fa-solid fa-handshake"></i> Publicita con Nosotros
+                            </a>
+                            <a href="#contacto" class="btn btn--outline">
+                                <i class="fa-solid fa-heart"></i> Apóyanos con una Donación
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== CONTACTO ========== -->
+        <section class="section section--dark" id="contacto">
+            <div class="container">
+                <div class="section__header">
+                    <span class="section__label">Escríbenos</span>
+                    <h2 class="section__title reveal">Contacto</h2>
+                </div>
+                <div class="contacto reveal">
+                    <div class="contacto__info">
+                        <h3>¿Tienes algo que decirnos?</h3>
+                        <p>Ya sea para colaborar, auspiciar, enviar saludos o sugerir temas, estamos atentos a tu mensaje.</p>
+                        <div class="contacto__details">
+                            <div class="contacto__detail">
+                                <i class="fa-solid fa-radio"></i>
+                                <span>Radio Portales 89.5 FM</span>
+                            </div>
+                            <div class="contacto__detail">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Valparaíso, Chile</span>
+                            </div>
+                            <div class="contacto__detail">
+                                <i class="fa-solid fa-clock"></i>
+                                <span>Viernes 19:00 · Sábado 11:30</span>
+                            </div>
+                        </div>
+                    </div>
+                    <form class="contacto__form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                        <div class="form__group">
+                            <label for="nombre" class="form__label">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" class="form__input" required minlength="2" placeholder="Tu nombre">
+                            <span class="form__error">Por favor ingresa tu nombre</span>
+                        </div>
+                        <div class="form__group">
+                            <label for="email" class="form__label">Email</label>
+                            <input type="email" id="email" name="email" class="form__input" required placeholder="tu@email.com">
+                            <span class="form__error">Por favor ingresa un email válido</span>
+                        </div>
+                        <div class="form__group">
+                            <label for="asunto" class="form__label">Asunto</label>
+                            <select id="asunto" name="asunto" class="form__input form__select" required>
+                                <option value="" disabled selected>Selecciona un asunto</option>
+                                <option value="saludo">Saludo al programa</option>
+                                <option value="tema">Sugerencia de tema</option>
+                                <option value="auspicio">Auspicio / Publicidad</option>
+                                <option value="donacion">Donación</option>
+                                <option value="prensa">Prensa / Medios</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <span class="form__error">Por favor selecciona un asunto</span>
+                        </div>
+                        <div class="form__group">
+                            <label for="mensaje" class="form__label">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" class="form__input form__textarea" required minlength="10" rows="5" placeholder="Escribe tu mensaje aquí..."></textarea>
+                            <span class="form__error">El mensaje debe tener al menos 10 caracteres</span>
+                        </div>
+                        <button type="submit" class="btn btn--primary btn--full">
+                            <i class="fa-solid fa-paper-plane"></i> Enviar Mensaje
+                        </button>
+                        <p class="form__success" id="formSuccess">¡Mensaje enviado! Te responderemos pronto.</p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <div class="footer__brand">
+                    <div class="footer__logo">
+                        <span class="nav__logo-star">★</span>
+                        <span>Vamos Somos Chilenos</span>
+                    </div>
+                    <p class="footer__tagline">Actualidad, historia y cultura desde el corazón de Chile.<br>Radio Portales 89.5 FM — Valparaíso.</p>
+                </div>
+                <nav class="footer__nav">
+                    <h4>Secciones</h4>
+                    <a href="#en-vivo">En Vivo</a>
+                    <a href="#redes">Redes</a>
+                    <a href="#episodios">Episodios</a>
+                    <a href="#programa">Programa</a>
+                    <a href="#equipo">Equipo</a>
+                    <a href="#contacto">Contacto</a>
+                </nav>
+                <div class="footer__social">
+                    <h4>Síguenos</h4>
+                    <div class="footer__social-links">
+                        <a href="https://youtu.be/NS6wsDt7Qwo" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="https://open.spotify.com/show/0svV8CI4En4r5P4bOc6Y3r" target="_blank" rel="noopener noreferrer" aria-label="Spotify"><i class="fa-brands fa-spotify"></i></a>
+                        <a href="https://tiktok.com/@vamossomoschilenos" target="_blank" rel="noopener noreferrer" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="https://x.com/SomosVamos" target="_blank" rel="noopener noreferrer" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/p/DV02TWPER-0/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/photo/?fbid=1484762013655916" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2026 Vamos Somos Chilenos. Todos los derechos reservados.</p>
+                <button class="footer__top-btn" id="backToTop" aria-label="Volver arriba">
+                    <i class="fa-solid fa-chevron-up"></i>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

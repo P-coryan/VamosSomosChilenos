@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guía de Mantenimiento — Vamos Somos Chilenos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Open+Sans:wght@400;600&family=Fira+Code:wght@400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --blue: #0039A6;
+            --red: #D52B1E;
+            --dark: #0c0c1a;
+            --dark-surface: #141428;
+            --dark-card: #1a1a35;
+            --white: #F5F5F5;
+            --gray: #a0a0b8;
+            --green: #1DB954;
+            --yellow: #f0c040;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: var(--dark);
+            color: var(--white);
+            line-height: 1.7;
+        }
+
+        /* --- NAV LATERAL --- */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 280px;
+            height: 100vh;
+            background: var(--dark-surface);
+            border-right: 1px solid rgba(255,255,255,0.06);
+            padding: 32px 24px;
+            overflow-y: auto;
+            z-index: 100;
+        }
+
+        .sidebar h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--red);
+            margin-bottom: 8px;
+        }
+
+        .sidebar p.sub {
+            font-size: 0.75rem;
+            color: var(--gray);
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .sidebar nav a {
+            display: block;
+            padding: 8px 12px;
+            margin-bottom: 2px;
+            font-size: 0.85rem;
+            color: rgba(255,255,255,0.6);
+            text-decoration: none;
+            border-radius: 6px;
+            transition: 0.2s;
+        }
+
+        .sidebar nav a:hover {
+            color: var(--white);
+            background: rgba(255,255,255,0.06);
+        }
+
+        .sidebar nav .sep {
+            height: 1px;
+            background: rgba(255,255,255,0.06);
+            margin: 12px 0;
+        }
+
+        /* --- CONTENIDO --- */
+        .content {
+            margin-left: 280px;
+            padding: 48px 48px 100px;
+            max-width: 900px;
+        }
+
+        h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+        }
+
+        h1 span { color: var(--red); }
+
+        .intro {
+            color: var(--gray);
+            font-size: 1.05rem;
+            margin-bottom: 48px;
+            padding-bottom: 32px;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+
+        h2.section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 900;
+            font-size: 1.5rem;
+            margin-top: 56px;
+            margin-bottom: 8px;
+            padding-top: 24px;
+            scroll-margin-top: 24px;
+        }
+
+        h2.section-title::before {
+            content: '★ ';
+            color: var(--red);
+        }
+
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.05rem;
+            margin-top: 32px;
+            margin-bottom: 12px;
+            color: var(--blue);
+        }
+
+        p, li {
+            margin-bottom: 12px;
+            color: rgba(255,255,255,0.8);
+        }
+
+        ol, ul {
+            padding-left: 24px;
+        }
+
+        ol li { list-style: decimal; }
+        ul li { list-style: disc; }
+
+        strong { color: var(--white); }
+
+        /* --- CODE BLOCKS --- */
+        pre {
+            background: var(--dark-card);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 10px;
+            padding: 20px 24px;
+            overflow-x: auto;
+            margin: 16px 0 24px;
+            font-family: 'Fira Code', monospace;
+            font-size: 0.82rem;
+            line-height: 1.8;
+            color: rgba(255,255,255,0.85);
+            position: relative;
+        }
+
+        pre .label {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.6rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--gray);
+            background: var(--dark);
+            padding: 2px 10px;
+            border-radius: 4px;
+        }
+
+        code {
+            font-family: 'Fira Code', monospace;
+            background: rgba(255,255,255,0.06);
+            padding: 2px 7px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            color: var(--yellow);
+        }
+
+        pre code {
+            background: none;
+            padding: 0;
+            color: inherit;
+        }
+
+        /* --- HIGHLIGHT DENTRO DE CODE --- */
+        .hl-tag { color: #e06c75; }
+        .hl-attr { color: #d19a66; }
+        .hl-val { color: #98c379; }
+        .hl-comment { color: #5c6370; font-style: italic; }
+        .hl-new { background: rgba(29, 185, 84, 0.12); display: inline; padding: 1px 4px; border-radius: 3px; }
+
+        /* --- ALERT BOXES --- */
+        .alert {
+            padding: 16px 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 0.9rem;
+            border-left: 4px solid;
+        }
+
+        .alert--tip {
+            background: rgba(29, 185, 84, 0.08);
+            border-color: var(--green);
+        }
+
+        .alert--tip::before {
+            content: '💡 Tip: ';
+            font-weight: 700;
+            color: var(--green);
+        }
+
+        .alert--warning {
+            background: rgba(240, 192, 64, 0.08);
+            border-color: var(--yellow);
+        }
+
+        .alert--warning::before {
+            content: '⚠️ Importante: ';
+            font-weight: 700;
+            color: var(--yellow);
+        }
+
+        .alert--info {
+            background: rgba(0, 57, 166, 0.1);
+            border-color: var(--blue);
+        }
+
+        .alert--info::before {
+            content: 'ℹ️ Nota: ';
+            font-weight: 700;
+            color: #5b9aff;
+        }
+
+        /* --- TABLE --- */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 16px 0 24px;
+            font-size: 0.88rem;
+        }
+
+        th {
+            text-align: left;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--gray);
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        td {
+            padding: 12px 16px;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+            color: rgba(255,255,255,0.8);
+        }
+
+        tr:hover td { background: rgba(255,255,255,0.02); }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: static;
+                width: 100%;
+                height: auto;
+                border-right: none;
+                border-bottom: 1px solid rgba(255,255,255,0.06);
+                padding: 24px 20px;
+            }
+            .content {
+                margin-left: 0;
+                padding: 32px 20px 80px;
+            }
+            h1 { font-size: 1.6rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+        <h2>Guía de Mantenimiento</h2>
+        <p class="sub">Vamos Somos Chilenos<br>Cómo actualizar el contenido de la página</p>
+        <nav>
+            <a href="#intro">Introducción</a>
+            <a href="#archivos">Archivos del Proyecto</a>
+            <div class="sep"></div>
+            <a href="#video">Cambiar Video Principal</a>
+            <a href="#episodios">Agregar Episodios</a>
+            <a href="#sponsors">Agregar Auspiciadores</a>
+            <a href="#equipo">Editar Equipo</a>
+            <a href="#fotos">Agregar Fotos</a>
+            <a href="#horarios">Cambiar Horarios</a>
+            <a href="#redes">Actualizar Redes</a>
+            <a href="#formspree">Configurar Formulario</a>
+            <div class="sep"></div>
+            <a href="#subir">Subir Cambios (GitHub)</a>
+            <a href="#errores">Errores Comunes</a>
+        </nav>
+    </aside>
+
+    <!-- CONTENIDO -->
+    <div class="content">
+        <h1>Guía de <span>Mantenimiento</span></h1>
+        <p class="intro" id="intro">
+            Esta guía explica cómo agregar y modificar contenido en la página web de <strong>Vamos Somos Chilenos</strong>.
+            No necesitas saber programar — solo seguir las instrucciones y copiar/pegar los bloques de código.
+            El único archivo que necesitas editar es <code>index.html</code>. Ábrelo con cualquier editor de texto (VS Code, Notepad++, o incluso el Bloc de Notas).
+        </p>
+
+        <!-- ========== ARCHIVOS ========== -->
+        <h2 class="section-title" id="archivos">Archivos del Proyecto</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Archivo</th>
+                    <th>Para qué sirve</th>
+                    <th>¿Hay que editarlo?</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><code>index.html</code></td>
+                    <td>Toda la página (contenido, textos, links)</td>
+                    <td><strong>Sí — aquí van todos los cambios</strong></td>
+                </tr>
+                <tr>
+                    <td><code>css/styles.css</code></td>
+                    <td>Los estilos visuales (colores, tamaños)</td>
+                    <td>Solo si quieres cambiar colores o diseño</td>
+                </tr>
+                <tr>
+                    <td><code>js/main.js</code></td>
+                    <td>Animaciones y funcionalidad</td>
+                    <td>Normalmente no</td>
+                </tr>
+                <tr>
+                    <td><code>assets/images/</code></td>
+                    <td>Fotos del equipo y logos de sponsors</td>
+                    <td>Agregar imágenes aquí</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ========== VIDEO PRINCIPAL ========== -->
+        <h2 class="section-title" id="video">Cambiar el Video Principal</h2>
+        <p>El video principal es un embed de YouTube en la sección <strong>"En Vivo"</strong>. Para cambiarlo:</p>
+
+        <ol>
+            <li>Abre el video en YouTube y copia el <strong>ID del video</strong> desde la URL. El ID es la parte después de <code>v=</code>. Por ejemplo, en <code>youtube.com/watch?v=<strong>NS6wsDt7Qwo</strong></code> el ID es <code>NS6wsDt7Qwo</code>.</li>
+            <li>En <code>index.html</code>, busca esta línea (alrededor de la <strong>línea 111</strong>):</li>
+        </ol>
+
+<pre><code><span class="hl-tag">&lt;iframe</span>
+    <span class="hl-attr">src=</span><span class="hl-val">"https://www.youtube.com/embed/<strong>NS6wsDt7Qwo</strong>"</span>
+</code><span class="label">index.html ~ línea 111</span></pre>
+
+        <ol start="3">
+            <li>Reemplaza <code>NS6wsDt7Qwo</code> por el nuevo ID del video. Ejemplo:</li>
+        </ol>
+
+<pre><code><span class="hl-tag">&lt;iframe</span>
+    <span class="hl-attr">src=</span><span class="hl-val">"https://www.youtube.com/embed/<span class="hl-new">NUEVO_ID_AQUI</span>"</span>
+</code><span class="label">resultado</span></pre>
+
+        <div class="alert alert--tip">Para buscar rápido en tu editor: presiona <code>Ctrl + F</code> (o <code>Cmd + F</code> en Mac) y busca <code>youtube.com/embed</code>.</div>
+
+        <!-- ========== EPISODIOS ========== -->
+        <h2 class="section-title" id="episodios">Agregar un Nuevo Episodio al Carousel</h2>
+        <p>Los episodios están en la sección <strong>"Episodios Recientes"</strong>. Para agregar uno nuevo:</p>
+
+        <ol>
+            <li>Busca en <code>index.html</code> la sección del carousel (busca <code>carousel__track</code>, alrededor de la <strong>línea 215</strong>).</li>
+            <li>Copia el siguiente bloque y pégalo <strong>al inicio</strong>, justo después de <code>&lt;div class="carousel__track"&gt;</code> para que aparezca primero:</li>
+        </ol>
+
+<pre><code><span class="hl-comment">&lt;!-- NUEVO EPISODIO --&gt;</span>
+<span class="hl-tag">&lt;article</span> <span class="hl-attr">class=</span><span class="hl-val">"carousel__card"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"carousel__thumb"</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;img</span> <span class="hl-attr">src=</span><span class="hl-val">"https://img.youtube.com/vi/<span class="hl-new">ID_DEL_VIDEO</span>/mqdefault.jpg"</span>
+             <span class="hl-attr">alt=</span><span class="hl-val">"Descripción del episodio"</span> <span class="hl-attr">loading=</span><span class="hl-val">"lazy"</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;span</span> <span class="hl-attr">class=</span><span class="hl-val">"carousel__play"</span><span class="hl-tag">&gt;&lt;i</span> <span class="hl-attr">class=</span><span class="hl-val">"fa-solid fa-play"</span><span class="hl-tag">&gt;&lt;/i&gt;&lt;/span&gt;</span>
+    <span class="hl-tag">&lt;/div&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"carousel__info"</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;h4&gt;</span><span class="hl-new">Título del Episodio</span><span class="hl-tag">&lt;/h4&gt;</span>
+        <span class="hl-tag">&lt;time&gt;</span><span class="hl-new">Viernes 19:00 hrs</span><span class="hl-tag">&lt;/time&gt;</span>
+    <span class="hl-tag">&lt;/div&gt;</span>
+<span class="hl-tag">&lt;/article&gt;</span>
+</code><span class="label">copiar y pegar</span></pre>
+
+        <ol start="3">
+            <li>Cambia las 3 partes resaltadas:
+                <ul>
+                    <li><code>ID_DEL_VIDEO</code> → el ID de YouTube (la miniatura se genera automáticamente)</li>
+                    <li><code>Título del Episodio</code> → nombre descriptivo</li>
+                    <li><code>Viernes 19:00 hrs</code> → día y hora correspondiente</li>
+                </ul>
+            </li>
+        </ol>
+
+        <div class="alert alert--tip">La miniatura del video se genera sola con la URL <code>https://img.youtube.com/vi/ID/mqdefault.jpg</code>. No necesitas descargar ninguna imagen.</div>
+
+        <div class="alert alert--info">Si el carousel tiene muchos episodios (más de 8), considera eliminar los más antiguos para que no quede muy largo. Borra el bloque <code>&lt;article class="carousel__card"&gt;...&lt;/article&gt;</code> completo del episodio que quieras quitar.</div>
+
+        <!-- ========== SPONSORS ========== -->
+        <h2 class="section-title" id="sponsors">Agregar un Auspiciador</h2>
+
+        <h3>Opción A: Auspiciador con logo (imagen)</h3>
+        <ol>
+            <li>Guarda el logo en la carpeta <code>assets/images/sponsors/</code>. Formatos recomendados: PNG con fondo transparente, tamaño ideal 200x100px.</li>
+            <li>Busca <code>sponsors__grid</code> en <code>index.html</code> (alrededor de la <strong>línea 385</strong>).</li>
+            <li>Agrega este bloque dentro del grid:</li>
+        </ol>
+
+<pre><code><span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"sponsors__logo"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;img</span> <span class="hl-attr">src=</span><span class="hl-val">"assets/images/sponsors/<span class="hl-new">nombre-logo.png</span>"</span>
+         <span class="hl-attr">alt=</span><span class="hl-val">"<span class="hl-new">Nombre del Auspiciador</span>"</span>
+         <span class="hl-attr">loading=</span><span class="hl-val">"lazy"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;span&gt;</span><span class="hl-new">Nombre del Auspiciador</span><span class="hl-tag">&lt;/span&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span>
+</code><span class="label">copiar y pegar</span></pre>
+
+        <h3>Opción B: Auspiciador sin logo (solo icono + texto)</h3>
+        <p>Si aún no tienes el logo, puedes usar un icono temporal:</p>
+
+<pre><code><span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"sponsors__logo"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;i</span> <span class="hl-attr">class=</span><span class="hl-val">"fa-solid fa-building"</span><span class="hl-tag">&gt;&lt;/i&gt;</span>
+    <span class="hl-tag">&lt;span&gt;</span><span class="hl-new">Nombre Empresa</span><span class="hl-tag">&lt;/span&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span>
+</code><span class="label">copiar y pegar</span></pre>
+
+        <h3>Quitar un auspiciador placeholder</h3>
+        <p>Para eliminar los auspiciadores de ejemplo, busca y borra el bloque completo <code>&lt;div class="sponsors__logo"&gt;...&lt;/div&gt;</code> que corresponda.</p>
+
+        <div class="alert alert--warning">Los logos aparecen en escala de grises y toman color al pasar el mouse por encima. Este efecto es automático. Si usas imágenes, asegúrate de que sean en color (el CSS se encarga del efecto).</div>
+
+        <!-- ========== EQUIPO ========== -->
+        <h2 class="section-title" id="equipo">Editar Información del Equipo</h2>
+        <p>Las tarjetas del equipo están en la sección <strong>"Equipo"</strong> (busca <code>equipo__grid</code>, alrededor de la <strong>línea 327</strong>).</p>
+
+        <h3>Cambiar nombre, rol o bio</h3>
+        <p>Busca la tarjeta de la persona y edita directamente:</p>
+
+<pre><code><span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"equipo__card"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"equipo__avatar"</span><span class="hl-tag">&gt;</span>
+        <span class="hl-tag">&lt;i</span> <span class="hl-attr">class=</span><span class="hl-val">"fa-solid fa-user"</span><span class="hl-tag">&gt;&lt;/i&gt;</span>
+    <span class="hl-tag">&lt;/div&gt;</span>
+    <span class="hl-tag">&lt;h4</span> <span class="hl-attr">class=</span><span class="hl-val">"equipo__name"</span><span class="hl-tag">&gt;</span><span class="hl-new">Nombre</span><span class="hl-tag">&lt;/h4&gt;</span>
+    <span class="hl-tag">&lt;span</span> <span class="hl-attr">class=</span><span class="hl-val">"equipo__role"</span><span class="hl-tag">&gt;</span><span class="hl-new">Conductor</span><span class="hl-tag">&lt;/span&gt;</span>
+    <span class="hl-tag">&lt;p</span> <span class="hl-attr">class=</span><span class="hl-val">"equipo__bio"</span><span class="hl-tag">&gt;</span><span class="hl-new">Descripción corta de la persona.</span><span class="hl-tag">&lt;/p&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span>
+</code><span class="label">editar textos</span></pre>
+
+        <h3>Agregar un nuevo miembro</h3>
+        <p>Copia una tarjeta completa <code>&lt;div class="equipo__card"&gt;...&lt;/div&gt;</code> y pégala dentro del grid correspondiente (viernes o sábado). Cambia nombre, rol y bio.</p>
+
+        <!-- ========== FOTOS ========== -->
+        <h2 class="section-title" id="fotos">Agregar Fotos del Equipo</h2>
+        <p>Actualmente cada miembro tiene un icono genérico. Para poner fotos reales:</p>
+
+        <ol>
+            <li>Guarda la foto en <code>assets/images/hosts/</code>. Recomendación: foto cuadrada, mínimo 200x200px, formato JPG o PNG.</li>
+            <li>En la tarjeta de la persona, reemplaza el icono por una imagen:</li>
+        </ol>
+
+        <p><strong>Antes</strong> (icono):</p>
+<pre><code><span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"equipo__avatar"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;i</span> <span class="hl-attr">class=</span><span class="hl-val">"fa-solid fa-user"</span><span class="hl-tag">&gt;&lt;/i&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span>
+</code><span class="label">antes</span></pre>
+
+        <p><strong>Después</strong> (foto):</p>
+<pre><code><span class="hl-tag">&lt;div</span> <span class="hl-attr">class=</span><span class="hl-val">"equipo__avatar"</span><span class="hl-tag">&gt;</span>
+    <span class="hl-tag">&lt;img</span> <span class="hl-attr">src=</span><span class="hl-val">"assets/images/hosts/<span class="hl-new">rodrigo.jpg</span>"</span>
+         <span class="hl-attr">alt=</span><span class="hl-val">"<span class="hl-new">Rodrigo</span>"</span>
+         <span class="hl-attr">loading=</span><span class="hl-val">"lazy"</span><span class="hl-tag">&gt;</span>
+<span class="hl-tag">&lt;/div&gt;</span>
+</code><span class="label">después</span></pre>
+
+        <div class="alert alert--tip">Para que la foto se vea circular, agrega esta línea en <code>css/styles.css</code> (búscalo al final del bloque <code>.equipo__avatar</code>):<br><br><code>.equipo__avatar img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }</code></div>
+
+        <!-- ========== HORARIOS ========== -->
+        <h2 class="section-title" id="horarios">Cambiar Horarios</h2>
+        <p>Los horarios aparecen en <strong>3 lugares</strong>. Debes actualizarlos todos:</p>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Ubicación</th>
+                    <th>Qué buscar en index.html</th>
+                    <th>Línea aprox.</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Hero (parte principal)</td>
+                    <td><code>hero__schedule-time</code></td>
+                    <td>~85</td>
+                </tr>
+                <tr>
+                    <td>Sección En Vivo</td>
+                    <td><code>envivo__horario</code></td>
+                    <td>~130</td>
+                </tr>
+                <tr>
+                    <td>Sección Equipo (subtítulos)</td>
+                    <td><code>equipo__subtitle</code></td>
+                    <td>~326</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="alert alert--warning">Recuerda actualizar los 3 lugares para que la información sea consistente en toda la página.</div>
+
+        <!-- ========== REDES ========== -->
+        <h2 class="section-title" id="redes">Actualizar Links de Redes Sociales</h2>
+        <p>Los links de redes aparecen en <strong>2 lugares</strong>:</p>
+        <ul>
+            <li><strong>Sección "Nuestras Redes"</strong> — tarjetas grandes (buscar <code>redes__card</code>, línea ~160)</li>
+            <li><strong>Footer</strong> — iconos pequeños (buscar <code>footer__social-links</code>, línea ~496)</li>
+        </ul>
+        <p>Para cambiar un link, busca la URL actual y reemplázala por la nueva. Ejemplo:</p>
+
+<pre><code><span class="hl-comment">&lt;!-- Cambiar el link de YouTube --&gt;</span>
+<span class="hl-tag">&lt;a</span> <span class="hl-attr">href=</span><span class="hl-val">"<span class="hl-new">https://youtube.com/@NuevoCanal</span>"</span>
+   <span class="hl-attr">target=</span><span class="hl-val">"_blank"</span> <span class="hl-attr">rel=</span><span class="hl-val">"noopener noreferrer"</span><span class="hl-tag">&gt;</span>
+</code><span class="label">ejemplo</span></pre>
+
+        <div class="alert alert--warning">Siempre mantén <code>target="_blank"</code> y <code>rel="noopener noreferrer"</code> en los links externos. Esto hace que se abran en una pestaña nueva de forma segura.</div>
+
+        <!-- ========== FORMSPREE ========== -->
+        <h2 class="section-title" id="formspree">Configurar el Formulario de Contacto</h2>
+        <p>El formulario usa <strong>Formspree</strong>, un servicio gratuito que recibe los mensajes y los envía a tu email.</p>
+
+        <ol>
+            <li>Ve a <strong>formspree.io</strong> y crea una cuenta gratis.</li>
+            <li>Crea un nuevo formulario y copia el ID que te dan (algo como <code>xabcdefg</code>).</li>
+            <li>En <code>index.html</code>, busca <code>YOUR_FORM_ID</code> (línea ~434) y reemplázalo:</li>
+        </ol>
+
+        <p><strong>Antes:</strong></p>
+<pre><code><span class="hl-tag">&lt;form</span> <span class="hl-attr">action=</span><span class="hl-val">"https://formspree.io/f/<strong>YOUR_FORM_ID</strong>"</span>
+</code><span class="label">antes</span></pre>
+
+        <p><strong>Después:</strong></p>
+<pre><code><span class="hl-tag">&lt;form</span> <span class="hl-attr">action=</span><span class="hl-val">"https://formspree.io/f/<span class="hl-new">xabcdefg</span>"</span>
+</code><span class="label">después</span></pre>
+
+        <div class="alert alert--info">El plan gratuito de Formspree permite hasta 50 envíos por mes, más que suficiente para empezar.</div>
+
+        <!-- ========== SUBIR CAMBIOS ========== -->
+        <h2 class="section-title" id="subir">Subir Cambios a GitHub Pages</h2>
+        <p>Después de hacer cambios en los archivos, sube las actualizaciones a GitHub para que se vean en la web:</p>
+
+<pre><code><span class="hl-comment"># 1. Abre la terminal en la carpeta del proyecto</span>
+cd VamosSomosChilenos
+
+<span class="hl-comment"># 2. Agrega los archivos modificados</span>
+git add .
+
+<span class="hl-comment"># 3. Crea un commit describiendo qué cambiaste</span>
+git commit -m "Agrego nuevo episodio y actualizo auspiciadores"
+
+<span class="hl-comment"># 4. Sube los cambios</span>
+git push
+</code><span class="label">terminal / consola</span></pre>
+
+        <p>Los cambios aparecerán en la web en <strong>1-2 minutos</strong> después del push.</p>
+
+        <div class="alert alert--tip">Si no usas la terminal, puedes editar los archivos directamente en github.com: abre el archivo, haz clic en el lápiz (editar), haz tus cambios y presiona "Commit changes".</div>
+
+        <!-- ========== ERRORES COMUNES ========== -->
+        <h2 class="section-title" id="errores">Errores Comunes</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Problema</th>
+                    <th>Causa probable</th>
+                    <th>Solución</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>La página se ve rota</td>
+                    <td>Falta cerrar una etiqueta HTML (<code>&lt;/div&gt;</code>, <code>&lt;/article&gt;</code>)</td>
+                    <td>Revisa que cada etiqueta abierta tenga su cierre</td>
+                </tr>
+                <tr>
+                    <td>El video no aparece</td>
+                    <td>ID de YouTube incorrecto</td>
+                    <td>Verifica que el ID sea correcto (11 caracteres)</td>
+                </tr>
+                <tr>
+                    <td>La imagen no carga</td>
+                    <td>Ruta del archivo mal escrita</td>
+                    <td>Verifica que el nombre coincida exactamente (mayúsculas/minúsculas importan)</td>
+                </tr>
+                <tr>
+                    <td>El formulario no envía</td>
+                    <td>Falta configurar Formspree</td>
+                    <td>Reemplaza <code>YOUR_FORM_ID</code> con tu ID real</td>
+                </tr>
+                <tr>
+                    <td>Los cambios no se ven en la web</td>
+                    <td>No hiciste <code>git push</code> o el caché</td>
+                    <td>Haz push y espera 2 min. Prueba con <code>Ctrl+Shift+R</code></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="alert alert--tip">Antes de subir cambios, siempre abre <code>index.html</code> directamente en tu navegador (doble clic en el archivo) para verificar que todo se vea bien.</div>
+
+        <br><br>
+        <p style="text-align: center; color: var(--gray); font-size: 0.85rem;">
+            ★ Guía de Mantenimiento — Vamos Somos Chilenos — Radio Portales 89.5 FM ★
+        </p>
+    </div>
+
+</body>
+</html>
