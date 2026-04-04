@@ -115,11 +115,15 @@ function formatDateChile(isoDate) {
 
 function getDayBadge(isoDate) {
     const d = new Date(isoDate);
-    const dayStr = d.toLocaleDateString('en-US', { timeZone: 'America/Santiago', weekday: 'long' });
-    if (dayStr === 'Friday') return { class: 'viernes', label: 'Viernes' };
-    if (dayStr === 'Saturday') return { class: 'sabado', label: 'Sábado' };
-    // For other days, determine by time
-    return { class: 'viernes', label: DAYS_ES[d.getDay()] || 'Episodio' };
+    // Get day name in Chile timezone (consistent with formatDateChile)
+    const dayEN = d.toLocaleDateString('en-US', { timeZone: 'America/Santiago', weekday: 'long' });
+    const dayES = d.toLocaleDateString('es-CL', { timeZone: 'America/Santiago', weekday: 'long' });
+    // Capitalize first letter
+    const label = dayES.charAt(0).toUpperCase() + dayES.slice(1);
+
+    if (dayEN === 'Friday') return { class: 'viernes', label: label };
+    if (dayEN === 'Saturday') return { class: 'sabado', label: label };
+    return { class: 'viernes', label: label };
 }
 
 function toISOChile(isoDate) {
