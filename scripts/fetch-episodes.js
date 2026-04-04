@@ -177,7 +177,7 @@ function generateCards(episodes) {
         return `                <article class="biblioteca__card">
                     <a href="https://www.youtube.com/watch?v=${ep.videoId}" target="_blank" rel="noopener noreferrer">
                         <div class="biblioteca__thumb">
-                            <img src="${ep.thumbnailUrl}" alt="${safeTitle}" loading="lazy">
+                            <img src="${ep.thumbnailUrl}" alt="${safeTitle}" width="320" height="180">
                             <span class="biblioteca__play"><i class="fa-solid fa-play"></i></span>
                             <span class="biblioteca__badge biblioteca__badge--${badge.class}">${badge.label}</span>
                         </div>
