@@ -113,16 +113,38 @@ function formatDateChile(isoDate) {
     }
 }
 
-function getDayBadge(isoDate) {
-    const d = new Date(isoDate);
-    // Get day name in Chile timezone (consistent with formatDateChile)
-    const dayEN = d.toLocaleDateString('en-US', { timeZone: 'America/Santiago', weekday: 'long' });
-    const dayES = d.toLocaleDateString('es-CL', { timeZone: 'America/Santiago', weekday: 'long' });
-    // Capitalize first letter
-    const label = dayES.charAt(0).toUpperCase() + dayES.slice(1);
+// Map Spanish month abbreviations from video titles to month index
+const MONTH_ABBR = {
+    'ENE': 0, 'FEB': 1, 'MAR': 2, 'ABR': 3, 'MAY': 4, 'JUN': 5,
+    'JUL': 6, 'AGO': 7, 'SEP': 8, 'OCT': 9, 'NOV': 10, 'DIC': 11
+};
 
-    if (dayEN === 'Friday') return { class: 'viernes', label: label };
-    if (dayEN === 'Saturday') return { class: 'sabado', label: label };
+/**
+ * Extract the date from the video title (e.g. "VAMOS SOMOS CHILENOS 02 ABR 2026")
+ * and return the day of the week. If no date found in title, fall back to publishedAt.
+ */
+function getDayBadge(title, isoDate) {
+    // Try to parse "DD MMM YYYY" from title
+    const match = title.match(/(\d{1,2})\s+(ENE|FEB|MAR|ABR|MAY|JUN|JUL|AGO|SEP|OCT|NOV|DIC)\s+(\d{4})/i);
+    let d;
+    if (match) {
+        const day = parseInt(match[1], 10);
+        const month = MONTH_ABBR[match[2].toUpperCase()];
+        const year = parseInt(match[3], 10);
+        d = new Date(year, month, day); // Local date, no timezone issues
+    } else {
+        // Fallback: use publish date in Chile timezone
+        d = new Date(isoDate);
+    }
+
+    const dayName = match
+        ? DAYS_ES[d.getDay()]
+        : d.toLocaleDateString('es-CL', { timeZone: 'America/Santiago', weekday: 'long' });
+    const label = dayName.charAt(0).toUpperCase() + dayName.slice(1);
+
+    const dayIdx = match ? d.getDay() : new Date(isoDate).getDay();
+    if (dayIdx === 5) return { class: 'viernes', label: label };
+    if (dayIdx === 6) return { class: 'sabado', label: label };
     return { class: 'viernes', label: label };
 }
 
@@ -147,7 +169,7 @@ function generateCards(episodes) {
     }
 
     return episodes.map((ep) => {
-        const badge = getDayBadge(ep.publishedAt);
+        const badge = getDayBadge(ep.title, ep.publishedAt);
         const dateDisplay = formatDateChile(ep.publishedAt);
         const datetime = toISOChile(ep.publishedAt);
         const safeTitle = ep.title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
