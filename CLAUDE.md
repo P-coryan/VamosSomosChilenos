@@ -86,7 +86,7 @@ El badge (etiqueta superior izquierda de cada tarjeta) extrae la fecha del **tí
 - YouTube: https://www.youtube.com/@vamossomoschilenos7099
 - X (Twitter): https://x.com/SomosVamos
 - TikTok: https://tiktok.com/@vamossomoschilenos
-- Instagram: https://www.instagram.com/p/DV02TWPER-0/
+- Instagram: https://www.instagram.com/vamossomoschilenos
 - Facebook: https://www.facebook.com/photo/?fbid=1484762013655916
 
 ### Equipo
@@ -113,14 +113,21 @@ El badge (etiqueta superior izquierda de cada tarjeta) extrae la fecha del **tí
 - Sitemap y robots.txt apuntan a `vamossomoschilenos.cl`
 
 ## Pendientes / TODO
-- [ ] Reemplazar `YOUR_FORM_ID` en el formulario de contacto con ID real de Formspree
 - [ ] Agregar fotos reales del equipo en `assets/images/hosts/`
 - [ ] Agregar logos de auspiciadores en `assets/images/sponsors/`
+- [ ] Activar "Enforce HTTPS" en GitHub Pages (cuando DNS se propague)
 - [x] ~~Configurar dominio personalizado~~ → `vamossomoschilenos.cl`
 - [x] ~~Inicializar repo git y subir a GitHub~~
 - [x] ~~Activar GitHub Pages~~
 - [x] ~~Auto-actualización de episodios~~
-- [ ] Activar "Enforce HTTPS" en GitHub Pages (cuando DNS se propague)
+- [x] ~~Formulario de contacto~~ → Formspree ID `mojppeaz`
+- [x] ~~Google Search Console~~ → verificado para `vamossomoschilenos.cl` y `www`
+
+## Notas Mobile
+- Menú mobile: fondo 100% opaco (`#0c0c1a`), `width: 100vw; height: 100vh` (no usar `inset: 0` ni `backdrop-filter`)
+- Biblioteca: NO usar clase `reveal` en el contenedor grid (el observer no se activa con elementos muy altos en mobile)
+- Thumbnails: usar `display: block; width: 100%; height: auto` (no `position: absolute` con `padding-bottom` trick)
+- No usar `loading="lazy"` en imágenes dentro de contenedores con position hacks
 
 ## Convenciones
 - CSS: metodología BEM (`bloque__elemento--modificador`)
