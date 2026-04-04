@@ -242,7 +242,7 @@ function updateIndexHTML(episodes) {
 
     const cards = generateCards(episodes);
     const newBiblioteca = `${bibStart}
-            <div class="biblioteca reveal">
+            <div class="biblioteca">
                 <div class="biblioteca__grid">
 ${cards}
                 </div>
