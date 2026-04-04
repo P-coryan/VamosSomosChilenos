@@ -10,10 +10,6 @@
     const navToggle = document.getElementById('navToggle');
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav__link');
-    const carousel = document.getElementById('carousel');
-    const carouselTrack = carousel ? carousel.querySelector('.carousel__track') : null;
-    const carouselPrev = document.getElementById('carouselPrev');
-    const carouselNext = document.getElementById('carouselNext');
     const contactForm = document.getElementById('contactForm');
     const formSuccess = document.getElementById('formSuccess');
     const backToTop = document.getElementById('backToTop');
@@ -104,19 +100,6 @@
     document.querySelectorAll('.stat').forEach(function (el) {
         statObserver.observe(el);
     });
-
-    // ---------- CAROUSEL CONTROLS ----------
-    if (carouselTrack && carouselPrev && carouselNext) {
-        var scrollAmount = 320;
-
-        carouselPrev.addEventListener('click', function () {
-            carouselTrack.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
-        });
-
-        carouselNext.addEventListener('click', function () {
-            carouselTrack.scrollBy({ left: scrollAmount, behavior: 'smooth' });
-        });
-    }
 
     // ---------- CONTACT FORM VALIDATION ----------
     if (contactForm) {

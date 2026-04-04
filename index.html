@@ -144,19 +144,12 @@
               {"@type": "Person", "name": "Patricio"}
             ]
           }
-        },
-        {
-          "@type": "VideoObject",
-          "name": "Vamos Somos Chilenos - Último Episodio",
-          "description": "Último episodio del programa Vamos Somos Chilenos en Radio Portales 89.5 FM, Valparaíso.",
-          "thumbnailUrl": "https://img.youtube.com/vi/NS6wsDt7Qwo/maxresdefault.jpg",
-          "uploadDate": "2026-01-01T00:00:00-03:00",
-          "embedUrl": "https://www.youtube.com/embed/NS6wsDt7Qwo",
-          "contentUrl": "https://www.youtube.com/watch?v=NS6wsDt7Qwo"
         }
       ]
     }
     </script>
+    <!-- JSONLD_VIDEOS_START -->
+    <!-- JSONLD_VIDEOS_END -->
 </head>
 <body>
 
@@ -175,7 +168,7 @@
             <nav class="nav__menu" id="navMenu" role="navigation">
                 <a href="#en-vivo" class="nav__link">En Vivo</a>
                 <a href="#redes" class="nav__link">Redes</a>
-                <a href="#episodios" class="nav__link">Episodios</a>
+                <a href="#episodios" class="nav__link">Biblioteca</a>
                 <a href="#programa" class="nav__link">Programa</a>
                 <a href="#equipo" class="nav__link">Equipo</a>
                 <a href="#contacto" class="nav__link">Contacto</a>
@@ -324,75 +317,24 @@
             </div>
         </section>
 
-        <!-- ========== EPISODIOS RECIENTES ========== -->
+        <!-- ========== BIBLIOTECA ========== -->
         <section class="section section--dark" id="episodios">
             <div class="container">
                 <div class="section__header">
                     <span class="section__label">Archivo</span>
-                    <h2 class="section__title reveal">Episodios Recientes</h2>
-                    <div class="carousel__controls">
-                        <button class="carousel__btn carousel__btn--prev" id="carouselPrev" aria-label="Episodio anterior">
-                            <i class="fa-solid fa-chevron-left"></i>
-                        </button>
-                        <button class="carousel__btn carousel__btn--next" id="carouselNext" aria-label="Episodio siguiente">
-                            <i class="fa-solid fa-chevron-right"></i>
-                        </button>
+                    <h2 class="section__title reveal">Biblioteca</h2>
+                    <p class="section__subtitle">Episodios del último mes</p>
+                </div>
+                <!-- BIBLIOTECA_START -->
+                <div class="biblioteca reveal">
+                    <div class="biblioteca__grid">
+                        <div class="biblioteca__empty">
+                            <i class="fa-solid fa-podcast"></i>
+                            <p>Los episodios se cargarán automáticamente. Visita nuestro <a href="https://www.youtube.com/@vamossomoschilenos7099" target="_blank" rel="noopener noreferrer">canal de YouTube</a> para ver todos los episodios.</p>
+                        </div>
                     </div>
                 </div>
-                <div class="carousel reveal" id="carousel">
-                    <div class="carousel__track">
-                        <article class="carousel__card">
-                            <div class="carousel__thumb">
-                                <img src="https://img.youtube.com/vi/NS6wsDt7Qwo/mqdefault.jpg" alt="Episodio de actualidad nacional: análisis semanal con Rodrigo, Rafael y Martín" loading="lazy">
-                                <span class="carousel__play"><i class="fa-solid fa-play"></i></span>
-                            </div>
-                            <div class="carousel__info">
-                                <h4>Actualidad Nacional — Análisis Semanal</h4>
-                                <time datetime="2026-03-20T19:00:00-03:00">Viernes 19:00 hrs</time>
-                            </div>
-                        </article>
-                        <article class="carousel__card">
-                            <div class="carousel__thumb">
-                                <img src="https://img.youtube.com/vi/B9tx6gRh5oA/mqdefault.jpg" alt="Episodio de historia de Chile: héroes e historias que inspiran con Jorge y Patricio" loading="lazy">
-                                <span class="carousel__play"><i class="fa-solid fa-play"></i></span>
-                            </div>
-                            <div class="carousel__info">
-                                <h4>Héroes de Chile — Historias que Inspiran</h4>
-                                <time datetime="2026-03-21T11:30:00-03:00">Sábado 11:30 hrs</time>
-                            </div>
-                        </article>
-                        <article class="carousel__card">
-                            <div class="carousel__thumb">
-                                <img src="https://img.youtube.com/vi/NS6wsDt7Qwo/mqdefault.jpg" alt="Episodio de debate sobre política y sociedad chilena" loading="lazy">
-                                <span class="carousel__play"><i class="fa-solid fa-play"></i></span>
-                            </div>
-                            <div class="carousel__info">
-                                <h4>Debate — Política y Sociedad</h4>
-                                <time datetime="2026-03-13T19:00:00-03:00">Viernes 19:00 hrs</time>
-                            </div>
-                        </article>
-                        <article class="carousel__card">
-                            <div class="carousel__thumb">
-                                <img src="https://img.youtube.com/vi/B9tx6gRh5oA/mqdefault.jpg" alt="Episodio Chile Profundo: tradiciones y cultura chilena" loading="lazy">
-                                <span class="carousel__play"><i class="fa-solid fa-play"></i></span>
-                            </div>
-                            <div class="carousel__info">
-                                <h4>Chile Profundo — Tradiciones y Cultura</h4>
-                                <time datetime="2026-03-14T11:30:00-03:00">Sábado 11:30 hrs</time>
-                            </div>
-                        </article>
-                        <article class="carousel__card">
-                            <div class="carousel__thumb">
-                                <img src="https://img.youtube.com/vi/NS6wsDt7Qwo/mqdefault.jpg" alt="Entrevista especial: voces de la región de Valparaíso" loading="lazy">
-                                <span class="carousel__play"><i class="fa-solid fa-play"></i></span>
-                            </div>
-                            <div class="carousel__info">
-                                <h4>Entrevista Especial — Voces de la Región</h4>
-                                <time datetime="2026-03-06T19:00:00-03:00">Viernes 19:00 hrs</time>
-                            </div>
-                        </article>
-                    </div>
-                </div>
+                <!-- BIBLIOTECA_END -->
             </div>
         </section>
 
@@ -613,7 +555,7 @@
                     <h4>Secciones</h4>
                     <a href="#en-vivo">En Vivo</a>
                     <a href="#redes">Redes</a>
-                    <a href="#episodios">Episodios</a>
+                    <a href="#episodios">Biblioteca</a>
                     <a href="#programa">Programa</a>
                     <a href="#equipo">Equipo</a>
                     <a href="#contacto">Contacto</a>

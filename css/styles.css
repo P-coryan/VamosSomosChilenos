@@ -654,86 +654,58 @@ input, select, textarea {
 .redes__card--portales:hover i { color: var(--red); }
 
 /* ============================================
-   CAROUSEL — EPISODIOS
+   BIBLIOTECA — EPISODIOS
    ============================================ */
-.carousel__controls {
-    display: flex;
-    gap: 8px;
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translateY(-50%);
+.section__subtitle {
+    color: var(--gray);
+    font-size: 1rem;
+    margin-top: 8px;
 }
 
-.carousel__btn {
-    width: 44px;
-    height: 44px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    font-size: 0.85rem;
-    color: var(--white);
-    transition: var(--transition);
-}
-
-.carousel__btn:hover {
-    background: var(--red);
-    border-color: var(--red);
-}
-
-.carousel__track {
-    display: flex;
+.biblioteca__grid {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 20px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    padding-bottom: 16px;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
-.carousel__track::-webkit-scrollbar {
-    display: none;
-}
-
-.carousel__card {
-    flex: 0 0 280px;
-    scroll-snap-align: start;
+.biblioteca__card {
     background: var(--dark-card);
     border-radius: var(--radius);
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.06);
     transition: var(--transition);
-    cursor: pointer;
 }
 
-.carousel__card:hover {
+.biblioteca__card a {
+    display: block;
+    color: inherit;
+}
+
+.biblioteca__card:hover {
     transform: translateY(-4px);
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
     border-color: rgba(255, 255, 255, 0.12);
 }
 
-.carousel__thumb {
+.biblioteca__thumb {
     position: relative;
     aspect-ratio: 16 / 9;
     overflow: hidden;
     background: var(--dark);
 }
 
-.carousel__thumb img {
+.biblioteca__thumb img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: var(--transition-slow);
 }
 
-.carousel__card:hover .carousel__thumb img {
+.biblioteca__card:hover .biblioteca__thumb img {
     transform: scale(1.05);
 }
 
-.carousel__play {
+.biblioteca__play {
     position: absolute;
     inset: 0;
     display: flex;
@@ -744,11 +716,11 @@ input, select, textarea {
     transition: var(--transition);
 }
 
-.carousel__card:hover .carousel__play {
+.biblioteca__card:hover .biblioteca__play {
     opacity: 1;
 }
 
-.carousel__play i {
+.biblioteca__play i {
     width: 50px;
     height: 50px;
     display: flex;
@@ -760,11 +732,34 @@ input, select, textarea {
     padding-left: 3px;
 }
 
-.carousel__info {
+.biblioteca__badge {
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    padding: 4px 10px;
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 700;
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.biblioteca__badge--viernes {
+    background: var(--blue);
+    color: var(--white-pure);
+}
+
+.biblioteca__badge--sabado {
+    background: var(--red);
+    color: var(--white-pure);
+}
+
+.biblioteca__info {
     padding: 20px;
 }
 
-.carousel__info h4 {
+.biblioteca__info h4 {
     font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.95rem;
@@ -772,10 +767,28 @@ input, select, textarea {
     margin-bottom: 8px;
 }
 
-.carousel__info time {
+.biblioteca__info time {
     font-size: 0.78rem;
     color: var(--gray);
     font-weight: 600;
+}
+
+.biblioteca__empty {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--gray);
+}
+
+.biblioteca__empty i {
+    font-size: 3rem;
+    margin-bottom: 16px;
+    opacity: 0.4;
+}
+
+.biblioteca__empty a {
+    color: var(--red);
+    text-decoration: underline;
 }
 
 /* ============================================
@@ -1260,8 +1273,8 @@ input, select, textarea {
 
 /* 480px+ */
 @media (min-width: 480px) {
-    .carousel__card {
-        flex: 0 0 300px;
+    .biblioteca__grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 
     .equipo__grid {
@@ -1326,8 +1339,8 @@ input, select, textarea {
         grid-template-columns: repeat(4, 1fr);
     }
 
-    .carousel__card {
-        flex: 0 0 320px;
+    .biblioteca__grid {
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
