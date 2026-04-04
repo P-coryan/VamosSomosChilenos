@@ -225,7 +225,36 @@ ${cards}
 
     html = html.slice(0, startIdx) + newBiblioteca + html.slice(endIdx + bibEnd.length);
 
-    // 2. Replace JSON-LD VideoObject / ItemList
+    // 2. Update "Último Episodio" iframe with the latest video
+    if (episodes.length > 0) {
+        const latest = episodes[0];
+        const envStart = '<!-- ENVIVO_START -->';
+        const envEnd = '<!-- ENVIVO_END -->';
+        const envStartIdx = html.indexOf(envStart);
+        const envEndIdx = html.indexOf(envEnd);
+
+        if (envStartIdx !== -1 && envEndIdx !== -1) {
+            const safeTitle = latest.title.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
+            const newEnvivo = `${envStart}
+                    <div class="envivo__video reveal">
+                        <div class="envivo__embed">
+                            <iframe
+                                src="https://www.youtube.com/embed/${latest.videoId}"
+                                title="${safeTitle}"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen
+                                loading="lazy">
+                            </iframe>
+                        </div>
+                    </div>
+                    ${envEnd}`;
+            html = html.slice(0, envStartIdx) + newEnvivo + html.slice(envEndIdx + envEnd.length);
+            console.log(`✓ "Último Episodio" updated to: ${latest.title} (${latest.videoId})`);
+        }
+    }
+
+    // 3. Replace JSON-LD VideoObject / ItemList
     const ldStart = '<!-- JSONLD_VIDEOS_START -->';
     const ldEnd = '<!-- JSONLD_VIDEOS_END -->';
     const ldStartIdx = html.indexOf(ldStart);
