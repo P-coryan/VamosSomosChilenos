@@ -345,7 +345,7 @@ input, select, textarea {
     position: relative;
     z-index: 1;
     text-align: center;
-    padding: 120px 20px 80px;
+    padding: 120px 20px 100px;
 }
 
 .hero__logo {
