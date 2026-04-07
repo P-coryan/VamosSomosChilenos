@@ -236,7 +236,7 @@ ${cards}
         if (envStartIdx !== -1 && envEndIdx !== -1) {
             const safeTitle = latest.title.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
             const newEnvivo = `${envStart}
-                    <div class="envivo__video reveal">
+                    <div class="envivo__player reveal">
                         <div class="envivo__embed">
                             <iframe
                                 src="https://www.youtube.com/embed/${latest.videoId}"

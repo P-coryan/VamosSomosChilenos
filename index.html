@@ -90,17 +90,22 @@
         },
         {
           "@type": "BroadcastEvent",
-          "name": "Vamos Somos Chilenos — Actualidad",
-          "description": "Rodrigo, Rafael y Martín analizan la actualidad nacional e internacional.",
-          "startDate": "2026-03-20T19:00:00-03:00",
+          "name": "Vamos Somos Chilenos — Lunes y Miércoles",
+          "description": "Vamos Somos Chilenos: actualidad nacional e internacional.",
           "isLiveBroadcast": true,
           "broadcastOfEvent": {
             "@type": "Event",
-            "name": "Programa del Viernes",
-            "startDate": "2026-03-20T19:00:00-03:00",
-            "endDate": "2026-03-20T21:00:00-03:00",
-            "description": "Rodrigo, Rafael y Martín analizan la actualidad nacional e internacional.",
+            "name": "VSCH Lunes y Miércoles",
+            "startDate": "2026-04-07T21:00:00-04:00",
+            "endDate": "2026-04-07T23:00:00-04:00",
+            "description": "Actualidad nacional e internacional, lunes y miércoles a las 21:00 hrs.",
             "eventStatus": "https://schema.org/EventScheduled",
+            "eventSchedule": {
+              "@type": "Schedule",
+              "byDay": ["https://schema.org/Monday", "https://schema.org/Wednesday"],
+              "startTime": "21:00:00",
+              "scheduleTimezone": "America/Santiago"
+            },
             "location": {
               "@type": "Place",
               "name": "Radio Portales 89.5 FM, Valparaíso",
@@ -109,27 +114,27 @@
             "organizer": {
               "@type": "Organization",
               "name": "Vamos Somos Chilenos"
-            },
-            "performer": [
-              {"@type": "Person", "name": "Rodrigo"},
-              {"@type": "Person", "name": "Rafael"},
-              {"@type": "Person", "name": "Martín"}
-            ]
+            }
           }
         },
         {
           "@type": "BroadcastEvent",
-          "name": "Vamos Somos Chilenos — Historia de Chile",
-          "description": "Jorge y Patricio reviven la historia de Chile y sus héroes.",
-          "startDate": "2026-03-21T11:30:00-03:00",
+          "name": "Vamos Somos Chilenos — Martes, Jueves y Viernes",
+          "description": "Vamos Somos Chilenos: actualidad nacional e internacional.",
           "isLiveBroadcast": true,
           "broadcastOfEvent": {
             "@type": "Event",
-            "name": "Programa del Sábado",
-            "startDate": "2026-03-21T11:30:00-03:00",
-            "endDate": "2026-03-21T13:30:00-03:00",
-            "description": "Jorge y Patricio reviven la historia de Chile y sus héroes.",
+            "name": "VSCH Martes, Jueves y Viernes",
+            "startDate": "2026-04-08T19:00:00-04:00",
+            "endDate": "2026-04-08T21:00:00-04:00",
+            "description": "Actualidad nacional e internacional, martes, jueves y viernes a las 19:00 hrs.",
             "eventStatus": "https://schema.org/EventScheduled",
+            "eventSchedule": {
+              "@type": "Schedule",
+              "byDay": ["https://schema.org/Tuesday", "https://schema.org/Thursday", "https://schema.org/Friday"],
+              "startTime": "19:00:00",
+              "scheduleTimezone": "America/Santiago"
+            },
             "location": {
               "@type": "Place",
               "name": "Radio Portales 89.5 FM, Valparaíso",
@@ -138,11 +143,65 @@
             "organizer": {
               "@type": "Organization",
               "name": "Vamos Somos Chilenos"
+            }
+          }
+        },
+        {
+          "@type": "BroadcastEvent",
+          "name": "Entre Libros y Películas",
+          "description": "Cultura, libros y cine los sábados y domingos a las 11:00 hrs.",
+          "isLiveBroadcast": true,
+          "broadcastOfEvent": {
+            "@type": "Event",
+            "name": "Entre Libros y Películas",
+            "startDate": "2026-04-11T11:00:00-04:00",
+            "endDate": "2026-04-11T11:30:00-04:00",
+            "description": "Cultura, libros y cine.",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventSchedule": {
+              "@type": "Schedule",
+              "byDay": ["https://schema.org/Saturday", "https://schema.org/Sunday"],
+              "startTime": "11:00:00",
+              "scheduleTimezone": "America/Santiago"
             },
-            "performer": [
-              {"@type": "Person", "name": "Jorge"},
-              {"@type": "Person", "name": "Patricio"}
-            ]
+            "location": {
+              "@type": "Place",
+              "name": "Radio Portales 89.5 FM, Valparaíso",
+              "address": "Valparaíso, Chile"
+            },
+            "organizer": {
+              "@type": "Organization",
+              "name": "Vamos Somos Chilenos"
+            }
+          }
+        },
+        {
+          "@type": "BroadcastEvent",
+          "name": "Reviendo la Historia",
+          "description": "Reviviendo la historia de Chile y sus héroes, sábados y domingos a las 11:30 hrs.",
+          "isLiveBroadcast": true,
+          "broadcastOfEvent": {
+            "@type": "Event",
+            "name": "Reviendo la Historia",
+            "startDate": "2026-04-11T11:30:00-04:00",
+            "endDate": "2026-04-11T13:30:00-04:00",
+            "description": "Reviviendo la historia de Chile y sus héroes.",
+            "eventStatus": "https://schema.org/EventScheduled",
+            "eventSchedule": {
+              "@type": "Schedule",
+              "byDay": ["https://schema.org/Saturday", "https://schema.org/Sunday"],
+              "startTime": "11:30:00",
+              "scheduleTimezone": "America/Santiago"
+            },
+            "location": {
+              "@type": "Place",
+              "name": "Radio Portales 89.5 FM, Valparaíso",
+              "address": "Valparaíso, Chile"
+            },
+            "organizer": {
+              "@type": "Organization",
+              "name": "Vamos Somos Chilenos"
+            }
           }
         }
       ]
@@ -362,7 +421,7 @@
     <header class="nav" id="nav">
         <div class="nav__container">
             <a href="#hero" class="nav__logo">
-                <span class="nav__logo-star">★</span>
+                <img src="assets/images/logoVSC.png" alt="Vamos Somos Chilenos" class="nav__logo-img">
                 <span class="nav__logo-text">Vamos<br>Somos Chilenos</span>
             </a>
             <button class="nav__toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -391,11 +450,8 @@
             </div>
             <div class="hero__content">
                 <p class="hero__badge anim-fade-up">Radio Portales 89.5 FM — Valparaíso</p>
-                <h1 class="hero__title anim-fade-up anim-delay-1">
-                    <span class="hero__title-line">Vamos</span>
-                    <span class="hero__title-line hero__title-line--accent">Somos</span>
-                    <span class="hero__title-line">Chilenos</span>
-                </h1>
+                <img src="assets/images/logoVSC.png" alt="Vamos Somos Chilenos" class="hero__logo hero__logo--main anim-fade-up anim-delay-1">
+                <h1 class="sr-only">Vamos Somos Chilenos — Radio Portales 89.5 FM Valparaíso</h1>
                 <p class="hero__tagline anim-fade-up anim-delay-2">Actualidad, historia y cultura desde el corazón de Chile</p>
                 <div class="hero__actions anim-fade-up anim-delay-3">
                     <a href="https://portalesfm.cl" target="_blank" rel="noopener noreferrer" class="btn btn--primary">
@@ -407,13 +463,38 @@
                 </div>
                 <div class="hero__schedule anim-fade-up anim-delay-4">
                     <div class="hero__schedule-item">
-                        <span class="hero__schedule-day">Viernes</span>
-                        <span class="hero__schedule-time">19:00 hrs</span>
+                        <span class="hero__schedule-day">Lun</span>
+                        <span class="hero__schedule-time">21:00</span>
                     </div>
                     <div class="hero__schedule-divider"></div>
                     <div class="hero__schedule-item">
-                        <span class="hero__schedule-day">Sábado</span>
-                        <span class="hero__schedule-time">11:30 hrs</span>
+                        <span class="hero__schedule-day">Mar</span>
+                        <span class="hero__schedule-time">19:00</span>
+                    </div>
+                    <div class="hero__schedule-divider"></div>
+                    <div class="hero__schedule-item">
+                        <span class="hero__schedule-day">Mié</span>
+                        <span class="hero__schedule-time">21:00</span>
+                    </div>
+                    <div class="hero__schedule-divider"></div>
+                    <div class="hero__schedule-item">
+                        <span class="hero__schedule-day">Jue</span>
+                        <span class="hero__schedule-time">19:00</span>
+                    </div>
+                    <div class="hero__schedule-divider"></div>
+                    <div class="hero__schedule-item">
+                        <span class="hero__schedule-day">Vie</span>
+                        <span class="hero__schedule-time">19:00</span>
+                    </div>
+                    <div class="hero__schedule-divider"></div>
+                    <div class="hero__schedule-item">
+                        <span class="hero__schedule-day">Sáb</span>
+                        <span class="hero__schedule-time">11:00</span>
+                    </div>
+                    <div class="hero__schedule-divider"></div>
+                    <div class="hero__schedule-item">
+                        <span class="hero__schedule-day">Dom</span>
+                        <span class="hero__schedule-time">11:00</span>
                     </div>
                 </div>
             </div>
@@ -432,7 +513,7 @@
                 </div>
                 <div class="envivo">
                     <!-- ENVIVO_START -->
-                    <div class="envivo__video reveal">
+                    <div class="envivo__player reveal">
                         <div class="envivo__embed">
                             <iframe
                                 src="https://www.youtube.com/embed/NS6wsDt7Qwo"
@@ -445,33 +526,49 @@
                         </div>
                     </div>
                     <!-- ENVIVO_END -->
-                    <div class="envivo__info reveal">
+                    <div class="envivo__about reveal">
                         <div class="envivo__badge">
                             <i class="fa-solid fa-tower-broadcast"></i> Radio Portales 89.5 FM
                         </div>
                         <h3 class="envivo__episode-title">Programa de la Semana</h3>
                         <p class="envivo__desc">Sintonízanos cada semana para estar al tanto de la actualidad nacional e internacional, y para revivir la historia de Chile y sus héroes.</p>
-                        <div class="envivo__horarios">
-                            <div class="envivo__horario">
-                                <div class="envivo__horario-icon"><i class="fa-solid fa-microphone"></i></div>
-                                <div>
-                                    <strong>Viernes 19:00 hrs</strong>
-                                    <p>Rodrigo, Rafael y Martín</p>
-                                    <span class="envivo__tema">Actualidad nacional e internacional</span>
-                                </div>
-                            </div>
-                            <div class="envivo__horario">
-                                <div class="envivo__horario-icon"><i class="fa-solid fa-book-open"></i></div>
-                                <div>
-                                    <strong>Sábado 11:30 hrs</strong>
-                                    <p>Jorge y Patricio</p>
-                                    <span class="envivo__tema">Reviviendo la historia de Chile</span>
-                                </div>
-                            </div>
-                        </div>
                         <a href="https://portalesfm.cl" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--full">
                             <i class="fa-solid fa-radio"></i> Escuchar Radio Portales En Vivo
                         </a>
+                    </div>
+                    <div class="envivo__horarios reveal">
+                        <div class="envivo__horario">
+                            <div class="envivo__horario-icon"><i class="fa-solid fa-microphone"></i></div>
+                            <div>
+                                <strong>Lunes y Miércoles 21:00 hrs</strong>
+                                <p>Vamos Somos Chilenos</p>
+                                <span class="envivo__tema">Actualidad nacional e internacional</span>
+                            </div>
+                        </div>
+                        <div class="envivo__horario">
+                            <div class="envivo__horario-icon"><i class="fa-solid fa-microphone"></i></div>
+                            <div>
+                                <strong>Martes, Jueves y Viernes 19:00 hrs</strong>
+                                <p>Vamos Somos Chilenos</p>
+                                <span class="envivo__tema">Actualidad nacional e internacional</span>
+                            </div>
+                        </div>
+                        <div class="envivo__horario">
+                            <div class="envivo__horario-icon"><i class="fa-solid fa-film"></i></div>
+                            <div>
+                                <strong>Sábado y Domingo 11:00 hrs</strong>
+                                <p>Entre Libros y Películas</p>
+                                <span class="envivo__tema">Cultura, libros y cine</span>
+                            </div>
+                        </div>
+                        <div class="envivo__horario">
+                            <div class="envivo__horario-icon"><i class="fa-solid fa-book-open"></i></div>
+                            <div>
+                                <strong>Sábado y Domingo 11:30 hrs</strong>
+                                <p>Reviendo la Historia</p>
+                                <span class="envivo__tema">Reviviendo la historia de Chile</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -791,7 +888,7 @@
                     <h2 class="section__title reveal">Nuestro Equipo</h2>
                 </div>
                 <div class="equipo reveal">
-                    <h3 class="equipo__subtitle">Programa del Viernes — 19:00 hrs — Actualidad</h3>
+                    <h3 class="equipo__subtitle">Vamos Somos Chilenos — Lunes a Viernes — Actualidad</h3>
                     <div class="equipo__grid equipo__grid--viernes">
                         <div class="equipo__card">
                             <div class="equipo__avatar">
@@ -799,7 +896,7 @@
                             </div>
                             <h4 class="equipo__name">Rodrigo</h4>
                             <span class="equipo__role">Conductor</span>
-                            <p class="equipo__bio">Análisis y debate de la actualidad nacional e internacional cada viernes.</p>
+                            <p class="equipo__bio">Análisis y debate de la actualidad nacional e internacional.</p>
                         </div>
                         <div class="equipo__card">
                             <div class="equipo__avatar">
@@ -819,7 +916,27 @@
                         </div>
                     </div>
 
-                    <h3 class="equipo__subtitle">Programa del Sábado — 11:30 hrs — Historia de Chile</h3>
+                    <h3 class="equipo__subtitle">Entre Libros y Películas — Sábado y Domingo 11:00 hrs</h3>
+                    <div class="equipo__grid equipo__grid--sabado">
+                        <div class="equipo__card">
+                            <div class="equipo__avatar equipo__avatar--sabado">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h4 class="equipo__name">Pilar</h4>
+                            <span class="equipo__role">Conductora</span>
+                            <p class="equipo__bio">Cultura, libros y cine cada fin de semana.</p>
+                        </div>
+                        <div class="equipo__card">
+                            <div class="equipo__avatar equipo__avatar--sabado">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <h4 class="equipo__name">Patricio</h4>
+                            <span class="equipo__role">Conductor</span>
+                            <p class="equipo__bio">Pasión por los libros y el séptimo arte.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="equipo__subtitle">Reviendo la Historia — Sábado y Domingo 11:30 hrs</h3>
                     <div class="equipo__grid equipo__grid--sabado">
                         <div class="equipo__card">
                             <div class="equipo__avatar equipo__avatar--sabado">
@@ -835,7 +952,7 @@
                             </div>
                             <h4 class="equipo__name">Patricio</h4>
                             <span class="equipo__role">Conductor</span>
-                            <p class="equipo__bio">Reviviendo la historia de Chile con pasión y rigor cada sábado.</p>
+                            <p class="equipo__bio">Reviviendo la historia de Chile con pasión y rigor.</p>
                         </div>
                     </div>
                 </div>
@@ -899,7 +1016,7 @@
                             </div>
                         </div>
                     </div>
-                    <form class="contacto__form" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" novalidate>
+                    <form class="contacto__form" id="contactForm" action="https://formspree.io/f/xnjowwww" method="POST" novalidate>
                         <div class="form__group">
                             <label for="nombre" class="form__label">Nombre</label>
                             <input type="text" id="nombre" name="nombre" class="form__input" required minlength="2" placeholder="Tu nombre">
