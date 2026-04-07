@@ -113,13 +113,39 @@ function formatDateChile(isoDate) {
     }
 }
 
-function getDayBadge(isoDate) {
-    const d = new Date(isoDate);
-    const dayStr = d.toLocaleDateString('en-US', { timeZone: 'America/Santiago', weekday: 'long' });
-    if (dayStr === 'Friday') return { class: 'viernes', label: 'Viernes' };
-    if (dayStr === 'Saturday') return { class: 'sabado', label: 'Sábado' };
-    // For other days, determine by time
-    return { class: 'viernes', label: DAYS_ES[d.getDay()] || 'Episodio' };
+// Map Spanish month abbreviations from video titles to month index
+const MONTH_ABBR = {
+    'ENE': 0, 'FEB': 1, 'MAR': 2, 'ABR': 3, 'MAY': 4, 'JUN': 5,
+    'JUL': 6, 'AGO': 7, 'SEP': 8, 'OCT': 9, 'NOV': 10, 'DIC': 11
+};
+
+/**
+ * Extract the date from the video title (e.g. "VAMOS SOMOS CHILENOS 02 ABR 2026")
+ * and return the day of the week. If no date found in title, fall back to publishedAt.
+ */
+function getDayBadge(title, isoDate) {
+    // Try to parse "DD MMM YYYY" from title
+    const match = title.match(/(\d{1,2})\s+(ENE|FEB|MAR|ABR|MAY|JUN|JUL|AGO|SEP|OCT|NOV|DIC)\s+(\d{4})/i);
+    let d;
+    if (match) {
+        const day = parseInt(match[1], 10);
+        const month = MONTH_ABBR[match[2].toUpperCase()];
+        const year = parseInt(match[3], 10);
+        d = new Date(year, month, day); // Local date, no timezone issues
+    } else {
+        // Fallback: use publish date in Chile timezone
+        d = new Date(isoDate);
+    }
+
+    const dayName = match
+        ? DAYS_ES[d.getDay()]
+        : d.toLocaleDateString('es-CL', { timeZone: 'America/Santiago', weekday: 'long' });
+    const label = dayName.charAt(0).toUpperCase() + dayName.slice(1);
+
+    const dayIdx = match ? d.getDay() : new Date(isoDate).getDay();
+    if (dayIdx === 5) return { class: 'viernes', label: label };
+    if (dayIdx === 6) return { class: 'sabado', label: label };
+    return { class: 'viernes', label: label };
 }
 
 function toISOChile(isoDate) {
@@ -143,7 +169,7 @@ function generateCards(episodes) {
     }
 
     return episodes.map((ep) => {
-        const badge = getDayBadge(ep.publishedAt);
+        const badge = getDayBadge(ep.title, ep.publishedAt);
         const dateDisplay = formatDateChile(ep.publishedAt);
         const datetime = toISOChile(ep.publishedAt);
         const safeTitle = ep.title.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -151,7 +177,7 @@ function generateCards(episodes) {
         return `                <article class="biblioteca__card">
                     <a href="https://www.youtube.com/watch?v=${ep.videoId}" target="_blank" rel="noopener noreferrer">
                         <div class="biblioteca__thumb">
-                            <img src="${ep.thumbnailUrl}" alt="${safeTitle}" loading="lazy">
+                            <img src="${ep.thumbnailUrl}" alt="${safeTitle}" width="320" height="180">
                             <span class="biblioteca__play"><i class="fa-solid fa-play"></i></span>
                             <span class="biblioteca__badge biblioteca__badge--${badge.class}">${badge.label}</span>
                         </div>
@@ -216,7 +242,7 @@ function updateIndexHTML(episodes) {
 
     const cards = generateCards(episodes);
     const newBiblioteca = `${bibStart}
-            <div class="biblioteca reveal">
+            <div class="biblioteca">
                 <div class="biblioteca__grid">
 ${cards}
                 </div>

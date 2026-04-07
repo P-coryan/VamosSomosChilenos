@@ -1,8 +1,8 @@
 # Robots.txt — Vamos Somos Chilenos
-# https://p-coryan.github.io/VamosSomosChilenos
+# https://vamossomoschilenos.cl
 
 User-agent: *
 Allow: /
 Disallow: /guia-mantenimiento.html
 
-Sitemap: https://p-coryan.github.io/VamosSomosChilenos/sitemap.xml
+Sitemap: https://vamossomoschilenos.cl/sitemap.xml

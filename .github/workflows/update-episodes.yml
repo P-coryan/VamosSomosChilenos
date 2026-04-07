@@ -38,6 +38,13 @@ jobs:
             echo "New episodes detected!"
           fi
 
+      - name: Update cache busting version
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          VERSION=$(date -u +%Y%m%d%H)
+          sed -i "s/styles\.css?v=[0-9]*/styles.css?v=$VERSION/" index.html
+          sed -i "s/main\.js?v=[0-9]*/main.js?v=$VERSION/" index.html
+
       - name: Commit and push updates
         if: steps.changes.outputs.changed == 'true'
         run: |
