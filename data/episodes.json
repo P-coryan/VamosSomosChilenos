@@ -1,6 +1,13 @@
 {
-  "lastUpdated": "2026-06-30T05:13:03.412Z",
+  "lastUpdated": "2026-07-01T00:02:23.875Z",
   "episodes": [
+    {
+      "videoId": "-3iUSFewZtI",
+      "title": "VAMOS SOMOS CHILENOS 30 JUN 2026",
+      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Carlos, Francisco y Oscar.  Temas de actualidad nacional e internacional🎧 Martes 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portalesf",
+      "publishedAt": "2026-06-30T23:00:32Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/-3iUSFewZtI/mqdefault.jpg"
+    },
     {
       "videoId": "rBXNM0DAo8U",
       "title": "REVIVIENDO LA HISTORIA 27 JUN 2026",
@@ -98,13 +105,6 @@
       "description": "🎧¡Vamos, Somos Chilenos. 🎧 Claudio Y Marco.  Comentando el acontecer nacional e internacional🎧 Lunes 21:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portalesfm.cl  \n",
       "publishedAt": "2026-06-09T01:00:05Z",
       "thumbnailUrl": "https://img.youtube.com/vi/nmeYNEkZU2w/mqdefault.jpg"
-    },
-    {
-      "videoId": "0-t76xUhoz8",
-      "title": "REVIVIENDO LA HISTORIA 06 JUN 2026",
-      "description": "¡Sábado y Domingo! en Vamos Somos Chilenos.  Jorge y Patricio. REVIVIENDO LA HISTORIA de Chile y sus Héroes  Sábado y Domingo 11:30 hrs. en Radio Portales 89.5 FM  ¡Les esperamos!\n\nLink Programa: http",
-      "publishedAt": "2026-06-06T15:30:08Z",
-      "thumbnailUrl": "https://img.youtube.com/vi/0-t76xUhoz8/mqdefault.jpg"
     }
   ]
 }
