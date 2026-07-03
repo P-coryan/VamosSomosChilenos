@@ -1,6 +1,13 @@
 {
-  "lastUpdated": "2026-07-02T04:55:51.826Z",
+  "lastUpdated": "2026-07-03T00:04:23.217Z",
   "episodes": [
+    {
+      "videoId": "pmryvLqWrYU",
+      "title": "VAMOS SOMOS CHILENOS 02 JUL 2026",
+      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Reinaldo, Marisol y Cristián.  Su invitado, Cristian Cortez, Ingeniero Civil Estructural y Magíster en Ciencias de la Ingeniería🎧 Jueves 19:00 hrs. en Radio Portales 89.5",
+      "publishedAt": "2026-07-02T23:00:38Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/pmryvLqWrYU/mqdefault.jpg"
+    },
     {
       "videoId": "-3iUSFewZtI",
       "title": "VAMOS SOMOS CHILENOS 30 JUN 2026",
@@ -98,13 +105,6 @@
       "description": "🎧¡Vamos, Somos Chilenos. 🎧 Carlos, Francisco y Oscar.  Comentando el acontecer nacional e internacional🎧 Martes 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://porta",
       "publishedAt": "2026-06-09T23:00:07Z",
       "thumbnailUrl": "https://img.youtube.com/vi/3MJ9EkgSNFA/mqdefault.jpg"
-    },
-    {
-      "videoId": "nmeYNEkZU2w",
-      "title": "VAMOS SOMOS CHILENOS 08 JUN 2026",
-      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Claudio Y Marco.  Comentando el acontecer nacional e internacional🎧 Lunes 21:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portalesfm.cl  \n",
-      "publishedAt": "2026-06-09T01:00:05Z",
-      "thumbnailUrl": "https://img.youtube.com/vi/nmeYNEkZU2w/mqdefault.jpg"
     }
   ]
 }
