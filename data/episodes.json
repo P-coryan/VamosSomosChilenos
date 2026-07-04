@@ -1,6 +1,13 @@
 {
-  "lastUpdated": "2026-07-03T00:04:23.217Z",
+  "lastUpdated": "2026-07-04T00:08:17.504Z",
   "episodes": [
+    {
+      "videoId": "j3t1GRayqg4",
+      "title": "VAMOS SOMOS CHILENOS 03 JUL 2026",
+      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Rodrigo Díaz Yubero.  Comentando el acontecer nacional e internacional🎧 Viernes 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portalesfm",
+      "publishedAt": "2026-07-03T23:00:24Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/j3t1GRayqg4/mqdefault.jpg"
+    },
     {
       "videoId": "pmryvLqWrYU",
       "title": "VAMOS SOMOS CHILENOS 02 JUL 2026",
@@ -98,13 +105,6 @@
       "description": "🎧¡Vamos, Somos Chilenos. 🎧 Reinaldo y Marisol.  Invitado, Luis Parot, director ejecutivo del IFOP🎧 Jueves 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portalesfm.",
       "publishedAt": "2026-06-11T23:00:38Z",
       "thumbnailUrl": "https://img.youtube.com/vi/qj8gJhflseE/mqdefault.jpg"
-    },
-    {
-      "videoId": "3MJ9EkgSNFA",
-      "title": "VAMOS SOMOS CHILENOS 09 JUN 2026",
-      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Carlos, Francisco y Oscar.  Comentando el acontecer nacional e internacional🎧 Martes 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://porta",
-      "publishedAt": "2026-06-09T23:00:07Z",
-      "thumbnailUrl": "https://img.youtube.com/vi/3MJ9EkgSNFA/mqdefault.jpg"
     }
   ]
 }
