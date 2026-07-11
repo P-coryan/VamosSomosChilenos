@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-07-11T00:01:29.674Z",
+  "lastUpdated": "2026-07-11T15:56:17.086Z",
   "episodes": [
+    {
+      "videoId": "ZdvftM1_rEI",
+      "title": "REVIVIENDO LA HISTORIA 10 JUL 2026",
+      "description": "¡Sábado y Domingo! en Vamos Somos Chilenos.  Jorge y Patricio. Invitado, Jorge Tortello, CN(R). REVIVIENDO LA HISTORIA de Chile y sus Héroes. Sábado y Domingo 11:30 hrs. en Radio Portales 89.5 FM.  ¡L",
+      "publishedAt": "2026-07-11T15:30:13Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/ZdvftM1_rEI/mqdefault.jpg"
+    },
+    {
+      "videoId": "SFjgCMr4OEM",
+      "title": "VAMOS SOMOS CHILENOS 10 JUL 2026",
+      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Rodrigo, Héctor, Martín y Cristobal.  Temas del acontecer nacional e internacional🎧 Viernes 21:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https:",
+      "publishedAt": "2026-07-11T01:00:28Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/SFjgCMr4OEM/mqdefault.jpg"
+    },
     {
       "videoId": "s5Ofl-arHZE",
       "title": "VAMOS SOMOS CHILENOS 09 JUL 2026",
@@ -91,20 +105,6 @@
       "description": "🎧¡Vamos, Somos Chilenos. 🎧 Héctor y Rodrigo.  Comentando el acontecer nacional e internacional🎧 Viernes 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portalesfm.cl",
       "publishedAt": "2026-06-19T23:00:21Z",
       "thumbnailUrl": "https://img.youtube.com/vi/3YwvPgFPqp4/mqdefault.jpg"
-    },
-    {
-      "videoId": "ecJPjxRK7Qg",
-      "title": "VAMOS SOMOS CHILENOS 18 JUN 2026",
-      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Reinaldo, Marisol y Chantal.  Invitado, Eduardo Troncoso Udwin, integrante de Los Huasos Quincheros🎧 Jueves 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink ",
-      "publishedAt": "2026-06-18T23:00:26Z",
-      "thumbnailUrl": "https://img.youtube.com/vi/ecJPjxRK7Qg/mqdefault.jpg"
-    },
-    {
-      "videoId": "x-fIW-OKOSw",
-      "title": "VAMOS SOMOS CHILENOS 16 JUN 2026",
-      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Carlos, Francisco y Oscar.  Comentando el acontecer nacional e internacional🎧 Martes 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://porta",
-      "publishedAt": "2026-06-16T23:00:00Z",
-      "thumbnailUrl": "https://img.youtube.com/vi/x-fIW-OKOSw/mqdefault.jpg"
     }
   ]
 }
