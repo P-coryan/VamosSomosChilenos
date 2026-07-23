@@ -1,6 +1,13 @@
 {
-  "lastUpdated": "2026-07-23T04:13:35.835Z",
+  "lastUpdated": "2026-07-23T23:59:20.397Z",
   "episodes": [
+    {
+      "videoId": "jRmWJpn5KI0",
+      "title": "VAMOS SOMOS CHILENOS 23 JUL 2026",
+      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Reinaldo, Marisol y Cristián.  Invitado, Sebastián Raby, Gerente General Corporación Regional de Turismo. 🎧 Jueves 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!",
+      "publishedAt": "2026-07-23T23:00:00Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/jRmWJpn5KI0/mqdefault.jpg"
+    },
     {
       "videoId": "cLRkDvTPTxU",
       "title": "VAMOS SOMOS CHILENOS 21 JUL 2026",
@@ -98,13 +105,6 @@
       "description": "🎧¡Vamos, Somos Chilenos. 🎧 Carlos, Francisco y Oscar.  Temas de actualidad nacional e internacional🎧 Martes 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portalesf",
       "publishedAt": "2026-06-30T23:00:32Z",
       "thumbnailUrl": "https://img.youtube.com/vi/-3iUSFewZtI/mqdefault.jpg"
-    },
-    {
-      "videoId": "rBXNM0DAo8U",
-      "title": "REVIVIENDO LA HISTORIA 27 JUN 2026",
-      "description": "¡Sábado y Domingo! en Vamos Somos Chilenos.  Jorge y Patricio. REVIVIENDO LA HISTORIA de Chile y sus Héroes.  Sábado y Domingo 11:30 hrs. en Radio Portales 89.5 FM  ¡Les esperamos!\n\nLink Programa: htt",
-      "publishedAt": "2026-06-27T15:30:35Z",
-      "thumbnailUrl": "https://img.youtube.com/vi/rBXNM0DAo8U/mqdefault.jpg"
     }
   ]
 }
