@@ -1,6 +1,20 @@
 {
-  "lastUpdated": "2026-10-02T02:00:46.856Z",
+  "lastUpdated": "2026-10-03T01:47:22.550Z",
   "episodes": [
+    {
+      "videoId": "soEHHzyMzbo",
+      "title": "VAMOS SOMOS CHILENOS 02 OCT 2026",
+      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Martín y Rodrigo.  Temas de interés nacional y regional. 🎧 Viernes 21:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portalesfm.cl  \n#VamosS",
+      "publishedAt": "2026-10-03T00:00:13Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/soEHHzyMzbo/mqdefault.jpg"
+    },
+    {
+      "videoId": "xR7RzbMQW9A",
+      "title": "VAMOS SOMOS CHILENOS 01 OCT 2026",
+      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Reinaldo y Cristián.  Invitado, Fernando Wilson, Historiador y Académico.🎧 Jueves 21:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portales",
+      "publishedAt": "2026-10-02T03:00:38Z",
+      "thumbnailUrl": "https://img.youtube.com/vi/xR7RzbMQW9A/mqdefault.jpg"
+    },
     {
       "videoId": "0X6nS3x1ifo",
       "title": "VAMOS SOMOS CHILENOS 29 SEP 2026",
@@ -91,20 +105,6 @@
       "description": "🎧¡Vamos, Somos Chilenos. 🎧 Reinaldo, Chantal y Cristián.  Invitado, Nelson Estay, Alcalde de Villa Alemana.🎧 Jueves 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://p",
       "publishedAt": "2026-09-10T22:00:23Z",
       "thumbnailUrl": "https://img.youtube.com/vi/OHt52qYUaL8/mqdefault.jpg"
-    },
-    {
-      "videoId": "KzZA2192kJ4",
-      "title": "VAMOS SOMOS CHILENOS 08 SEP 2026",
-      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Carlos, Francisco y Oscar.  Tema del acontecer nacional e internacional🎧 Martes 19:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portalesfm",
-      "publishedAt": "2026-09-08T22:00:13Z",
-      "thumbnailUrl": "https://img.youtube.com/vi/KzZA2192kJ4/mqdefault.jpg"
-    },
-    {
-      "videoId": "VidHsq0dPNk",
-      "title": "VAMOS SOMOS CHILENOS 07 SEP 2026",
-      "description": "🎧¡Vamos, Somos Chilenos. 🎧 Jaime Y Marco.  Con temas del acontecer nacional e internacional🎧 Lunes 21:00 hrs. en Radio Portales 89.5 FM 🎧 ¡Les esperamos!\n\nLink Programa: https://portalesfm.cl  \n#V",
-      "publishedAt": "2026-09-08T00:00:33Z",
-      "thumbnailUrl": "https://img.youtube.com/vi/VidHsq0dPNk/mqdefault.jpg"
     }
   ]
 }
